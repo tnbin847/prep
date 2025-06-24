@@ -1,0 +1,45 @@
+spring:
+  profiles:
+    active:
+      - in-memory
+    group:
+      in-memory: platform-h2
+      local: platform-mariadb
+    include:
+      - common
+
+---
+spring:
+  config:
+    activate:
+      on-profile: common
+  application:
+    name: prep-v1
+  main:
+    banner-mode: OFF
+  thymeleaf:
+    prefix: file:src/main/resources/templates/
+    suffix: .html
+    encoding: 'UTF-8'
+    cache: false
+  web:
+    resources:
+      static-locations: file:src/main/resources/static/
+      cache:
+        period: 36000
+
+server:
+  servlet:
+    encoding:
+      charset: 'UTF-8'
+      enabled: true
+      force: true
+
+---
+spring:
+  config:
+    activate:
+      on-profile: platform-h2
+
+server:
+  port: 80
