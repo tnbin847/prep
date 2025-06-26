@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+
+
+/**
+ * ================================================================================
+ *  TYPEFACE
+ * ================================================================================
+ */
+
+@font-face {
+    font-family: 'GmarketSans-Medium';
+    font-style: normal;
+    font-display: swap;
+    src: url(/fonts/GmarketSans-Medium.woff2) format('woff2'),
+         url(/fonts/GmarketSans-Medium.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    font-style: normal;
+    font-display: swap;
+    src: url(/fonts/Pretendard-Regular.woff2) format('woff2'),
+         url(/fonts/Pretendard-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard-Medium';
+    font-style: normal;
+    font-display: swap;
+    src: url(/fonts/Pretendard-Medium.woff2) format('woff2'),
+         url(/fonts/Pretendard-Medium.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat-ExtrBold';
+    font-style: normal;
+    font-display: swap;
+    src: url(/fonts/Montserrat-ExtraBold.woff2) format('woff2'),
+         url(/fonts/Montserrat-ExtraBold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    font-style: normal;
+    font-display: swap;
+    src: url(/fonts/Montserrat-Black.woff2) format('woff2'),
+         url(/fonts/Montserrat-Black.woff) format('woff');
+}
+
+
+
+/**
+ * ================================================================================
+ *  VARIABLES
+ * ================================================================================
+ */
+
+:root {
+    /**
+     * ----------------------------------------
+     *  COLORS
+     * ----------------------------------------
+     */
+
+    /* SHADES */
+    --white: #FFFFFF;
+    --gray-100: #F8F9FA;
+    --gray-200: #E9ECEF;
+    --gray-300: #DEE2E6;
+    --gray-400: #CED4DA;
+    --gray-500: #ADB5BD;
+    --gray-600: #6C6B7E;
+    --gray-700: #495057;
+    --gray-800: #343A40;
+    --gray-900: #212529;
+    --black: #1E2224;
+
+    /* MAIN COLORS */
+    --color-primary: #5F67DC;
+    --color-secondary: #9EA3EA;
+    --color-accent: #1486FF;
+    --color-light: #F8F8F9;
+    --color-dark: #484757;
+
+    /* FEEDBACK */
+    --color-success: #55B980;
+    --color-warning: #FBCA77;
+    --color-danger: #EE585B;
+    
+    /* SOCIAL COMPONENT COLORS */
+    --color-kakao-background: #FAE100;
+    --color-kakao-foreground: #3C1E1E;
+    --color-google-background: var(--white);
+    --color-google-foreground: var(--color-dark);
+
+
+    /**
+     * ----------------------------------------
+     *  SPACING
+     * ----------------------------------------
+     */
+
+    --spacing-scale: 0.25;
+    --spacing-unit: 16px;
+
+    --spacing-none: calc(var(--spacing-unit) * calc(var(--spacing-scale) * 0));
+
+    --spacing-xxxs: calc(var(--spacing-unit) * calc(var(--spacing-scale) * 1));
+    --spacing-xxs: calc(var(--spacing-unit) * calc(var(--spacing-scale) * 2));
+    --spacing-xs: calc(var(--spacing-unit) * calc(var(--spacing-scale) * 3));
+
+    --spacing-sm: calc(var(--spacing-unit) * calc(var(--spacing-scale) * 4));
+    --spacing-md: calc(var(--spacing-unit) * calc(var(--spacing-scale) * 5));
+    --spacing-lg: calc(var(--spacing-unit) * calc(var(--spacing-scale) * 6));
+
+    --spacing-xl: calc(var(--spacing-unit) * calc(var(--spacing-scale) * 7));
+    --spacing-xxl: calc(var(--spacing-unit) * calc(var(--spacing-scale) * 8));
+    --spacing-xxxl: calc(var(--spacing-unit) * calc(var(--spacing-scale) * 9));
+
+
+    /**
+     * ----------------------------------------
+     *  TYPOGRAPHY
+     * ----------------------------------------
+     */
+    
+    /* TYPEFACE */
+    --body-font-family: 'Pretendard-Regular', sans-serif;
+    --accent-font-family: 'Pretendard-Medium', sans-serif;
+
+    --heading-font-family-primary: 'GmarketSans-Medium', sans-serif;
+    --heading-font-family-secondary: 'Montserrat-ExtraBold',sans-serif;
+
+    /* FONT WEIGHT */
+    --font-weight-default: 600;
+
+    /* FONT SIZE */
+    --font-size-unit: 14px;
+    --font-size-scale: 2px;
+
+    --font-base-size: 13px;
+
+    --font-size-sm: calc(var(--font-size-unit) - calc(var(--font-size-scale) * 1));
+    --font-size-md: calc(var(--font-size-unit) + calc(var(--font-size-scale) * 2));
+    --font-size-lg: calc(var(--font-size-unit) + calc(var(--font-size-scale) * 4));
+    --font-size-xl: calc(var(--font-size-unit) + calc(var(--font-size-scale) * 6));
+
+
+    /**
+     * ----------------------------------------
+     *  SIZE
+     * ----------------------------------------
+     */
+
+    --size-unit: 40px;
+    --size-scale: 2;
+
+    --size-xs: calc(var(--size-unit) * calc(var(--size-scale) * 1));
+    --size-sm: calc(var(--size-unit) * calc(var(--size-scale) * 2));
+    --size-md: calc(var(--size-unit) * calc(var(--size-scale) * 3));
+    --size-lg: calc(var(--size-unit) * calc(var(--size-scale) * 4));
+    --size-xl: calc(var(--size-unit) * calc(var(--size-scale) * 5));
+
+
+    /**
+     * ----------------------------------------
+     *  ELEMENT
+     * ----------------------------------------
+     */
+    
+    /* LINE HEIGHT */
+    --line-height-body: 1.7;
+    --line-height-heading: 1.3;
+    --line-height-component: 1;
+
+    /* HEIGHT */
+    --field-element-height: 42px;
+
+    /* BORDER */
+    --border-width-normal: 1px;
+    --border-width-bold: 2px;
+    --border-width-heavy: 3px;
+
+    --border-radius: 3px;
+
+    /* OPACITY */
+    --opacity-weak: 0.3;
+    --opacity-strong: 0.7;
+}
+
+
+
+/**
+ * ================================================================================
+ *  INITIALIZE CODES
+ * ================================================================================
+ */
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    line-height: var(--line-height-body);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, small, i, span,
+div, dl, dt, dd, ol, ul, li, table, tbody, tfoot, thead, tr, th, td,
+footer, header, hgroup, menu, nav, section, article, aside,
+form, fieldset, label, legend, img, applet, object, iframe, abbr, acronym, address, big, cite, code, del, dfn, em,
+ins, kbd, q, s, samp, canvas, details, summary, time, mark, audio, video, output, ruby, embed,
+strike, strong, sub, sup, tt, var, b, u, center, caption, figure, figcaption {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: middle;
+    font: inherit;
+    font-size: 100%;
+    font-weight: var(--font-weight-default);
+}
+
+header, footer, hgroup, menu, nav, section, article, aside, img, details, figcaption, figure {
+     display: block;
+}
+
+p, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, span, table, th, td,
+form, fieldset, legend, label, input, textarea, select, button, code, em, strong {
+    word-break: keep-all;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+q::before,
+q::after,
+blockquote::before,
+blockquote::after {
+    content: '';
+    content: none;
+}
+
+img,
+fieldset {
+    border: 0;
+    background: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+legend {
+    overflow: hidden;
+    position: absolute;
+    left: -9999px;
+    font-size: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+form {
+    line-height: var(--line-height-component);
+}
+
+button,
+input,
+textarea,
+select {
+    position: relative;
+    width: 100%;
+    line-height: var(--line-height-component);
+    border: 0;
+    background: none;
+    outline: none;
+    appearance: none;
+}
+
+button {
+    font-weight: var(--font-weight-default);
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
+}

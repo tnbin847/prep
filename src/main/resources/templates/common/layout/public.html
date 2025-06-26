@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" 
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title layout:title-pattern="$LAYOUT_TITLE · $CONTENT_TITLE">프랩</title>
+    <!-- 공통 스타일시트 -->
+    <th:block th:replace="~{common/layout/fragments/styles :: styles}"></th:block>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="container" class="flex-col align-centered">
+            <div id="contents">
+                <th:block layout:fragment="content"></th:block>
+            </div>
+        </div>
+        <th:block th:replace="~{common/layout/fragments/footer :: footer}"></th:block>
+    </div>
+
+    <!-- 공통 자바스크립트 -->
+    <th:block th:replace="~{common/layout/fragments/scripts :: scripts}"></th:block>
+    <!-- 페이지별 자바스크립트 -->
+    <th:block layout:fragment="page_script"></th:block>
+</body>
+</html>

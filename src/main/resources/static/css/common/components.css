@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+
+
+/**
+ * ================================================================================
+ *  CONTENTS
+ * ================================================================================
+ */
+
+/**
+ * ----------------------------------------
+ *  TEXT
+ * ----------------------------------------
+ */
+
+/* GENERAL */
+html,
+body,
+form {
+    font-family: var(--body-font-family);
+    font-size: var(--font-base-size);
+    font-weight: var(--font-weight-default);
+    color: var(--gray-800);
+}
+
+/* COLORIZED */
+.is-text-primary {
+    color: var(--color-primary);
+}
+
+.is-text-secondary {
+    color: var(--color-secondary);
+}
+
+.is-text-accent {
+    color: var(--color-accent);
+}
+
+/* ALIGNMENT */
+.has-text-left {
+    text-align: left;
+}
+
+.has-text-right {
+    text-align: right;
+}
+
+.has-text-center {
+    text-align: center;
+}
+
+/* LINK */
+.has-link {
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}
+.has-link > a:hover {
+    text-decoration: underline;
+}
+
+
+/**
+ * ----------------------------------------
+ *  IMAGE
+ * ----------------------------------------
+ */
+
+/* IMAGE WRAPPER */
+.has-img {
+    display: block;
+    position: relative;
+    width: fit-content;
+}
+
+
+
+/**
+ * ================================================================================
+ *  PANEL
+ * ================================================================================
+ */
+
+/* CONTAINER */
+.panel-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-lg) var(--spacing-none);
+}
+
+/* GENERAL */
+.panel,
+.panel-header,
+.panel-body {
+    position: relative;
+    width: 100%;
+}
+
+.panel {
+    padding: var(--spacing-xxxl);
+    border-radius: var(--border-radius);
+    border: var(--border-width-normal) solid var(--gray-300);
+    background-color: var(--white);
+}
+
+.panel-header {
+    margin-bottom: var(--spacing-xxxl);
+    line-height: var(--line-height-heading);
+}
+
+
+
+/**
+ * ================================================================================
+ *  BUTTON
+ * ================================================================================
+ */
+
+/* BASE */
+.button {
+    display: inline-block;
+    height: var(--field-element-height);
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius);
+    border: var(--border-width-normal) solid var(--gray-300);
+    background-color: var(--gray-200);
+    font-size: var(--font-base-size);
+    color: inherit;
+}
+
+/* COLORIZED */
+.button.is-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--white);
+}
+
+.button.is-secondary {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--white);
+}

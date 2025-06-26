@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko" 
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout/public}">
+<head>
+    <title>로그인</title>
+    <link rel="stylesheet" href="/css/pages/index.css">
+</head>
+<th:block layout:fragment="content">
+    <div class="panel-container">
+        <div class="panel">
+            <header class="panel-header">
+                <div class="has-img is-small m-auto">
+                    <img src="/images/logo.png" alt="로고">
+                </div>
+            </header>
+            <div class="panel-body">
+                <form id="signIn">
+                    <div class="field-container">
+                        <div class="field mb-1">
+                            <input type="text" name="email" id="loginEmail" class="input" placeholder="이메일" autocomplete="off" autofocus>
+                        </div>
+                        <div class="field">
+                            <input type="password" name="password" id="loginPwd" class="input" placeholder="비밀번호" autocomplete="off">
+                        </div>
+                        <div class="field has-text-right">
+                            <a href="#" class="is-text-accent">비밀번호를 잊으셨나요?</a>
+                        </div>
+                    </div>
+                    <div class="field-container">
+                        <button id="signInBtn" class="button is-primary">로그인</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="panel p-4">
+            <div class="panel-body has-text-center">
+                계정이 없으신가요? <a href="/sign-up" class="is-text-accent">회원가입</a>
+            </div>
+        </div>
+    </div>
+</th:block><!-- / content -->
+
+<th:block layout:fragment="page_script">
+    <script src="/js/pages/index.js"></script>
+</th:block>
+</html>
