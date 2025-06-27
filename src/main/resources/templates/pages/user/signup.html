@@ -23,21 +23,17 @@
                             <div class="has-addons">
                                 <div class="field-control">
                                     <input type="text" name="email" id="email" class="input" autofocus>
-                                    <i class="icon-cancel"></i>
                                 </div>
                                 <button type="button" id="existsEmailBtn" class="button is-primary is-fluid">중복 확인</button>
                             </div>
-                            <small class="">이미 가입된 이메일입니다.</small>
                         </div>
                         <!-- 비밀번호 -->
                         <div class="field">
                             <label for="password" class="label">비밀번호</label>
                             <div class="field-control">
                                 <input type="password" name="password" id="password" class="input" aria-describedby="pwdHelperText">
-                                <i class="icon-ok"></i>
                             </div>
                             <span id="pwdHelperText" class="help"><i class="icon-info-circled"></i> 영문 + 숫자 + 특수문자 조합의 8~16자</span>
-                            <small class="">사용 가능한 비밀번호입니다.</small>
                         </div>
                         <!-- 비밀번호 확인 -->
                         <div class="field">
@@ -91,6 +87,7 @@
 </th:block>
 
 <th:block layout:fragment="page_script">
+    <script src="/js/pages/signup.js"></script>
 </th:block>
 </body>
 </html>

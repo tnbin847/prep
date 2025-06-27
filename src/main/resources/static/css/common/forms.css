@@ -152,6 +152,54 @@
  * ================================================================================
  */
 
+/* .field-control + .has-invalid-feedback || has-valid-feedback */
+/* GENERAL */
+.has-invalid-feedback > .feedback-icon,
+.invalid-feedback-message {
+    color: var(--color-danger);
+}
+
+.has-valid-feedback > .feedback-icon,
+.valid-feedback-message {
+    color: var(--color-success);
+}
+
+/* VALIDATION FIELD */
+.has-invalid-feedback > .input,
+.has-valid-feedback > .input {
+    padding-right: var(--spacing-xxl);
+}
+
+.has-invalid-feedback > .input,
+.has-invalid-feedback > .select {
+    border-color: var(--color-danger);
+}
+
+.has-valid-feedback > .input,
+.has-valid-feedback > .select {
+    border-color: var(--color-success);
+}
+
+/* VALIDATION ICON */ 
+.feedback-icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: var(--spacing-xs);
+    font-size: var(--font-size-sm);
+}
+
+/* VALIDATION MESSAGE */
+.invalid-feedback-message,
+.valid-feedback-message {
+    display: block;
+    margin-top: var(--spacing-xxxs);
+    font-size: var(--font-size-sm);
+}
+ 
+
 
 
 
