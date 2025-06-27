@@ -10,32 +10,59 @@
 
 /**
  * ----------------------------------------
- *  FORM FIELD LAYOUT
+ *  COMMON
  * ----------------------------------------
  */
 
-/* COMMON */
 .field-container,
 .field {
     width: 100%;
 }
 
-/* CONTAINER */
+/**
+ * ----------------------------------------
+ *  FIELD CONTAINER
+ * ----------------------------------------
+ */
+
 .field-container {
     display: flex;
     flex-direction: column;
     margin: var(--spacing-lg) var(--spacing-none);
 }
+
 .field-container:first-child {
     margin-top: var(--spacing-none);
 }
+
 .field-container:last-child {
     margin-bottom: var(--spacing-none);
 }
 
 
+/**
+ * ----------------------------------------
+ *  FIELD BLOCK
+ * ----------------------------------------
+ */
+
 .field:not(:last-child) {
     margin-bottom: var(--spacing-sm);
+}
+
+.has-addons,
+.field-control {
+    display: flex;
+}
+
+.has-addons {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.has-addons > *:first-child {
+    flex: 1;
+    margin-right: var(--spacing-xxxs);
 }
 
 
@@ -46,11 +73,84 @@
  * ================================================================================
  */
 
+/**
+ * ----------------------------------------
+ *  COMMON
+ * ----------------------------------------
+ */
+
+.label,
+.help,
+.input,
+.textarea,
+.select,
+.radio,
+.checkbox {
+    display: inline-block;
+}
+
+.input,
+.select,
+.textarea {
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius);
+    border: var(--border-width-normal) solid var(--gray-300);
+    background-color: var(--white);
+}
+
+.input,
+.select {
+    height: var(--field-element-height);
+}
+
+
+/**
+ * ----------------------------------------
+ *  INPUT FIELD
+ * ----------------------------------------
+ */
+
+/* LABEL */
+.label {
+    margin-bottom: var(--spacing-xxxs);
+    font-family: var(--accent-font-family);
+    font-size: var(--font-base-size);
+    font-weight: var(--font-weight-default);
+    color: var(--color-dark);
+}
+
+/* INPUT */
+.input {
+    font-family: var(--body-font-family);
+    font-size: var(--font-base-size);
+    font-weight: var(--font-weight-default);
+    color: var(--gray-800);
+}
+
+.input::placeholder {
+    font-family: var(--accent-font-family);
+    font-weight: 500;
+    color: var(--gray-400);
+}
+
+.input:focus {
+    border-color: var(--color-primary);
+}
+
+/* HELPER TEXT */
+.help {
+    margin-top: var(--spacing-xxxs);
+    font-size: var(--font-size-xs);
+    color: var(--gray-500);
+}
 
 
 
-
-
+/**
+ * ================================================================================
+ *  FORM VALIDATION
+ * ================================================================================
+ */
 
 
 

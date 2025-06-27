@@ -25,11 +25,11 @@
                             <input type="password" name="password" id="loginPwd" class="input" placeholder="비밀번호" autocomplete="off">
                         </div>
                         <div class="field has-text-right">
-                            <a href="#" class="is-text-accent">비밀번호를 잊으셨나요?</a>
+                            <a href="#" class="is-link is-text-accent">비밀번호를 잊으셨나요?</a>
                         </div>
                     </div>
                     <div class="field-container">
-                        <button id="signInBtn" class="button is-primary">로그인</button>
+                        <button type="button" id="signInBtn" class="button is-primary">로그인</button>
                     </div>
                 </form>
             </div>
@@ -37,11 +37,11 @@
 
         <div class="panel p-4">
             <div class="panel-body has-text-center">
-                계정이 없으신가요? <a href="/sign-up" class="is-text-accent">회원가입</a>
+                계정이 없으신가요? <a href="/sign-up" class="is-link is-text-accent">회원가입</a>
             </div>
         </div>
     </div>
-</th:block><!-- / content -->
+</th:block>
 
 <th:block layout:fragment="page_script">
     <script src="/js/pages/index.js"></script>

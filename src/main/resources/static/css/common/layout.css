@@ -54,6 +54,29 @@
     background-color: var(--gray-200);
 }
 
+#footer .copy {
+    font-size: var(--font-size-xs);
+    color: var(--gray-500);
+}
+
+#footer .icon-container > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    padding: var(--spacing-xs);
+    border-radius: 50%;
+    border: var(--border-width-normal) solid var(--color-primary);
+}
+
+#footer .icon-container > a .icon {
+    font-size: var(--font-base-size);
+    color: var(--color-primary);
+}
+
 
 
 /**

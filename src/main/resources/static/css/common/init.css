@@ -141,6 +141,7 @@
 
     --font-base-size: 13px;
 
+    --font-size-xs: calc(var(--font-size-unit) - calc(var(--font-size-scale) * 2));
     --font-size-sm: calc(var(--font-size-unit) - calc(var(--font-size-scale) * 1));
     --font-size-md: calc(var(--font-size-unit) + calc(var(--font-size-scale) * 2));
     --font-size-lg: calc(var(--font-size-unit) + calc(var(--font-size-scale) * 4));

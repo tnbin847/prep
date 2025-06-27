@@ -51,11 +51,7 @@ form {
 }
 
 /* LINK */
-.has-link {
-    font-size: var(--font-size-sm);
-    color: var(--gray-600);
-}
-.has-link > a:hover {
+.is-link:hover {
     text-decoration: underline;
 }
 
@@ -107,6 +103,25 @@ form {
 .panel-header {
     margin-bottom: var(--spacing-xxxl);
     line-height: var(--line-height-heading);
+}
+
+.panel-header .panel-heading {
+    font-size: var(--font-size-lg);
+    color: var(--color-dark);
+}
+
+.panel-header .panel-subheading {
+    margin-top: var(--spacing-xxxs);
+    font-family: var(--body-font-family);
+    color: var(--gray-600);
+
+}
+.panel-header .panel-heading.is-primary {
+    font-family: var(--heading-font-family-primary);
+}
+
+.panel-header .panel-heading.is-secondary {
+    font-family: var(--heading-font-family-secondary);
 }
 
 

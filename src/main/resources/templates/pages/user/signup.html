@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{common/layout/public}">
+<head>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="/css/pages/user/signup.css">
+</head>
+<body>
+<th:block layout:fragment="content">
+    <div class="panel-container mt-5">
+        <div class="panel">
+            <header class="panel-header">
+                <h1 class="panel-heading is-primary">회원가입</h1>
+            </header>
+            <div class="panel-body">
+                <form id="signUp" autocomplete="off">
+                    <div class="field-container">
+                        <!-- 이메일 -->
+                        <div class="field">
+                            <label for="email" class="label">이메일</label>
+                            <div class="has-addons">
+                                <div class="field-control">
+                                    <input type="text" name="email" id="email" class="input" autofocus>
+                                    <i class="icon-cancel"></i>
+                                </div>
+                                <button type="button" id="existsEmailBtn" class="button is-primary is-fluid">중복 확인</button>
+                            </div>
+                            <small class="">이미 가입된 이메일입니다.</small>
+                        </div>
+                        <!-- 비밀번호 -->
+                        <div class="field">
+                            <label for="password" class="label">비밀번호</label>
+                            <div class="field-control">
+                                <input type="password" name="password" id="password" class="input" aria-describedby="pwdHelperText">
+                                <i class="icon-ok"></i>
+                            </div>
+                            <span id="pwdHelperText" class="help"><i class="icon-info-circled"></i> 영문 + 숫자 + 특수문자 조합의 8~16자</span>
+                            <small class="">사용 가능한 비밀번호입니다.</small>
+                        </div>
+                        <!-- 비밀번호 확인 -->
+                        <div class="field">
+                            <label for="confirmPassword" class="label">비밀번호 확인</label>
+                            <div class="field-control">
+                                <input type="password" name="confirmPassword" id="confirmPassword" class="input">
+                            </div>
+                        </div>
+                        <!-- 닉네임 -->
+                        <div class="field">
+                            <label for="nickname" class="label">닉네임</label>
+                            <div class="has-addons">
+                                <div class="field-control">
+                                    <input type="text" name="nickname" id="nickname" class="input" aria-describedby="nicknameHelperText">
+                                </div>
+                                <button type="button" id="existsNicknameBtn" class="button is-primary is-fluid">중복 확인</button>
+                            </div>
+                            <span id="nicknameHelperText" class="help"><i class="icon-info-circled"></i> 영문 + 숫자 조합의 3~15자</span>
+                        </div>
+                        <!-- 이름 -->
+                        <div class="field">
+                            <label for="name" class="label">이름</label>
+                            <div class="field-control">
+                                <input type="text" name="name" id="name" class="input">
+                            </div>
+                        </div>
+                        <!-- 휴대폰 번호 -->
+                        <div class="field">
+                            <label for="phone" class="label">휴대폰 번호</label>
+                            <div class="field-control">
+                                <input type="text" name="phone" id="phone" class="input" placeholder="하이픈('-')을 제외한 숫자만 입력해주세요.">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field-container">
+                        <div class="field">
+                            <button type="button" id="signUpBtn" class="button is-primary">가입하기</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="panel p-4">
+            <div class="panel-body has-text-center">
+                가입된 계정이 있으신가요? <a href="/" class="is-link is-text-accent">로그인</a>
+            </div>
+        </div>
+    </div>
+</th:block>
+
+<th:block layout:fragment="page_script">
+</th:block>
+</body>
+</html>
